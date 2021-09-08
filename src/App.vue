@@ -1,44 +1,32 @@
 <template>
-  <it-alert
-    class="alert"
-    iconbox
-    type="primary"
-    :title="alertTitle"
-    :body="alertBody"
-    closable="true"
-  />
+ <n-alert title="In progress" type="info" closable>
+    tired of tiktok? Here you go, only positive vibes video
+  </n-alert>
   <TikTokStream />
 </template>
 
 <script>
-import { ref } from 'vue'
+import { defineComponent ,ref } from 'vue'
 import TikTokStream from './components/TikTokStream.vue'
+import { NAlert } from 'naive-ui'
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
     TikTokStream,
+    NAlert
   },
   setup() {
-    const alertTitle = ref('Hola 👋')
-    const alertBody = ref(
-      'addicted to TikTok? Here you go, only positive vibes.    /leo',
-    )
+    const show = ref(true)
     return {
-      alertTitle,
-      alertBody,
+      show
     }
   },
-}
+})
 </script>
 
 <style>
-.alert {
-  position: absolute;
-  z-index: 20;
-  max-width: 80vw;
-  margin: 1rem;
-}
+
 
 
 </style>

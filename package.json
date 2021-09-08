@@ -4,14 +4,16 @@
   "author": "leovoon",
   "scripts": {
     "dev": "vite",
+    "serve": "vite preview",
     "build": "vite build"
   },
   "dependencies": {
-    "equal-vue": "^0.79.3",
     "vue": "^3.0.0-rc.5"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.5",
-    "vite": "^0.20.0"
+    "naive-ui": "^2.18.1",
+    "vfonts": "^0.1.0",
+    "vite": "^0.20.10"
   }
 }
