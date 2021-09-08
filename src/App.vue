@@ -1,32 +1,43 @@
 <template>
- <n-alert title="In progress" type="info" closable>
-    tired of tiktok? Here you go, only positive vibes video
-  </n-alert>
+  <n-modal
+    v-model:show="showModal"
+    preset="dialog"
+    title="Hola 👋"
+    content="Here you go, only positive vibes video"
+    positive-text="Got it"
+    @positive-click="submitCallback"
+    
+  />
   <TikTokStream />
 </template>
 
 <script>
-import { defineComponent ,ref } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import TikTokStream from './components/TikTokStream.vue'
-import { NAlert } from 'naive-ui'
+import { NModal } from 'naive-ui'
 
 export default defineComponent({
   name: 'App',
   components: {
     TikTokStream,
-    NAlert
+    NModal,
   },
+
   setup() {
-    const show = ref(true)
+
+    const showModal = ref(false)
+
+    onMounted(()=> showModal.value = true)
+
     return {
-      show
+      showModal,
+      
+      submitCallback() {
+        showModal.value = false
+      },
     }
   },
 })
 </script>
 
-<style>
-
-
-
-</style>
+<style></style>
