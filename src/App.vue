@@ -2,12 +2,15 @@
   <n-modal
     v-model:show="showModal"
     preset="dialog"
-    title="Hola 👋"
-    content="Here you go, only positive vibes video"
     positive-text="Got it"
     @positive-click="submitCallback"
-    
-  />
+  >
+   <template #header>
+      <div>Hola 👋</div>
+    </template>
+    <div>Here you go, only positive vibes video.<br> <a href='https://github.com/leovoon/kindness_video/blob/master/src/videos.json'>Add video here</a></div>
+
+  </n-modal>
   <TikTokStream />
 </template>
 

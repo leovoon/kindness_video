@@ -2,7 +2,7 @@
   <div class="video">
 
     <video :src="video" ref="vidRef" @click="togglePlay" />
-  
+   
     <svg
       
       viewBox="0 0 512 512"
@@ -21,6 +21,7 @@ export default defineComponent({
   name: "video",
   props: {
     video: String,
+    
   },
   setup() {
     const vidRef = ref(null);
@@ -30,6 +31,8 @@ export default defineComponent({
     });
 
     const play = () => {
+      if(vidRef.value.paused)
+        vidRef.value.play();
       vidRef.value.play();
       state.playing = true;
     };
@@ -72,7 +75,7 @@ video {
   position: relative;
 }
 
-svg {
+svg, .loading  {
   position: absolute;
   top: calc(50% - 35px);
   left: calc(50% - 35px);

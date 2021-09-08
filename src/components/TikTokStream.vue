@@ -102,7 +102,6 @@ export default defineComponent({
       onSwipe,
       tiktokStream,
       tiktokShuffled,
-      tiktokData,
       tiktokRefs,
     }
   },
