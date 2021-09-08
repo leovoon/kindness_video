@@ -1,0 +1,17 @@
+{
+  "name": "vue3-youtube-short",
+  "version": "0.0.0",
+  "author": "leovoon",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "equal-vue": "^0.79.3",
+    "vue": "^3.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.5",
+    "vite": "^0.20.0"
+  }
+}
